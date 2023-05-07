@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(black 50%, red);
+        }
+
+        .container{
+            width: 1280px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .container .card{
+            position: relative;
+            height: 400px;
+            width: 300px;
+            background: linear-gradient(black, black 30%, rgb(253, 3, 3) 30%, rgb(255, 5, 5));
+            border-radius: 20px;
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .container .card .img{
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            transition: 0.5s;
+            transform-origin: top;
+            z-index: 100;
+        }
+
+        .container .card:hover .img{
+            transform: translateY(30px) scale(0.5);
+        }
+
+        .container .card .img img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .container .card .content{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 30px;
+            transform: translateY(100%);
+            transition: 0.5s;
+        }
+
+        .container .card:hover .content{
+            transform: translateY(0);
+        }
+
+        .container .card .content .details{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h2{
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        span{
+            color: black;
+        }
+
+        .container .card .content .details .social_icons{
+            display: flex;
+            list-style: none;
+            position: relative;
+            margin: 5px;
+        }
+
+        .container .card .content .details .social_icons li{
+            list-style: none;
+            margin: 5px;
+        }
+
+        .container .card .content .details .social_icons li a{
+            font-size: 1.5rem;
+          
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: red;
+            transition: 0.5s;
+        }
+
+        .container .card .content .details .social_icons li a:hover{
+            background-color: white;
+            transform: rotate(360deg);
+        }
+        h1{
+            z-index: 10000;
+            color: rgb(255, 255, 255);
+            background-color: black;
+            backdrop-filter: blur(20px);
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="img">
+                <h1>The Batmam</h1>
+                <img src="batman.webp" alt="batman">
+            </div>
+            <div class="content">
+              <div class="details">
+                <h2>Boopathiraja<br><span>Full stack develaper</span></h2>
+                <ul class="social_icons">
+                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="batman.webp" alt="batman">
+            </div>
+            <div class="content">
+              <div class="details">
+                <h2>Boopathiraja<br><span>Full stack develaper</span></h2>
+                <ul class="social_icons">
+                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="batman.webp" alt="batman">
+            </div>
+            <div class="content">
+              <div class="details">
+                <h2>Boopathiraja<br><span>Full stack develaper</span></h2>
+                <ul class="social_icons">
+                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="batman.webp" alt="batman">
+            </div>
+            <div class="content">
+              <div class="details">
+                <h2>Boopathiraja<br><span>Full stack develaper</span></h2>
+                <ul class="social_icons">
+                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
